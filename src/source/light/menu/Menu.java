@@ -3,9 +3,9 @@ package source.light.menu;
 public class Menu {
 	
 	/**
-	 * Menu terá como herdeira a classe source.light.Run.
-	 * Menu instanciará todas as classes dos pacotes source.light.a , source.light.b e source.light.c.
-	 * Menu terá uma troca constante de dados com tais classes.
+	 * Menu will be inherited from the source.light.Run class.
+	 * Menu instantiate all classes of the source.light.a, source.light.b, and source.light.c packages.
+	 * Menu will have a constant exchange of data with such classes.
 	 */
 	
 	public Menu() {
