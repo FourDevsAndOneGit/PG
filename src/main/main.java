@@ -1,5 +1,9 @@
 package main;
 
+import javax.swing.JOptionPane;
+
+import source.light.Run;
+
 public class main {
 	
 	/**
@@ -13,7 +17,16 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Run run = new Run();
 		
+		String [] opc = {"Versão light","Versão Full"};
+		Object menu = JOptionPane.showInputDialog(null, "Escolha a versão", "PG", JOptionPane.QUESTION_MESSAGE, null, opc, opc[0]);
+		if (menu.equals(opc[0])) {
+			run.Executable();
+		}else {
+			JOptionPane.showMessageDialog(null, "Versão full ainda em desenvolvimento", "PG", JOptionPane.ERROR_MESSAGE, null);
+			main(null);
+		}
 	}
-
+	
 }
