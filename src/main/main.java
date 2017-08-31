@@ -20,12 +20,17 @@ public class main {
 		Run run = new Run();
 		
 		String [] opc = {"Versão light","Versão Full"};
-		Object menu = JOptionPane.showInputDialog(null, "Escolha a versão", "PG", JOptionPane.QUESTION_MESSAGE, null, opc, opc[0]);
-		if (menu.equals(opc[0])) {
-			run.Executable();
-		}else {
-			JOptionPane.showMessageDialog(null, "Versão full ainda em desenvolvimento", "PG", JOptionPane.ERROR_MESSAGE, null);
-			main(null);
+		try {
+			Object menu = JOptionPane.showInputDialog(null, "Escolha a versão", "PG", JOptionPane.QUESTION_MESSAGE, null, opc, opc[0]);
+			if (menu.equals(opc[0])) {
+				run.Executable();
+			}else {
+				JOptionPane.showMessageDialog(null, "Versão full ainda em desenvolvimento", "PG", JOptionPane.ERROR_MESSAGE, null);
+				main(null);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			JOptionPane.showMessageDialog(null, "Ocorreu um erro inesperado", "PG", JOptionPane.ERROR_MESSAGE, null);
 		}
 	}
 	

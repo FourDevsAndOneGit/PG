@@ -36,7 +36,7 @@ public class Menu {
 	
 	public void goVariablesTopic () {
 		Variables variables = new Variables();
-		
+		variables.startTopic();
 	}
 
 }
